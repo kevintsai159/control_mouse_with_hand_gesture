@@ -8,10 +8,12 @@ import cv2
 import mediapipe as mp
 import pyautogui
 
+# Get your main screen resolution
 resolution = pyautogui.size()
 screen_width = resolution.width
 screen_height = resolution.height
 
+# Load MediaPipe hands model
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
@@ -22,6 +24,9 @@ cap.set(3, screen_width)
 cap.set(4, screen_height)
 cap_width = int(cap.get(3))
 cap_height = int(cap.get(4))
+
+
+# Set Variables
 cap_boundary = 50
 mouse_x = 50
 mouse_y = 50
